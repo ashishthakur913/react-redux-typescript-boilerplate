@@ -1,10 +1,12 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { App as TodoApp } from 'app/containers/App';
 import { hot } from 'react-hot-loader';
 
 export const App = hot(module)(() => (
-  <Switch>
-    <Route path="/" component={TodoApp} />
-  </Switch>
+	<BrowserRouter>
+		<Switch>
+			<Route path="/" component={TodoApp} />
+		</Switch>
+	</BrowserRouter>
 ));
